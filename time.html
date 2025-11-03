@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDRA — TIME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Urbanist:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+    <header id="nav" class="nav nav--scrolled">
+        <div class="container nav__inner">
+            <a href="index.html#home" class="logo">
+                <img src="assets/logo.svg" alt="IDRA" class="logo__img" />
+                <span class="logo__text">IDRA</span>
+            </a>
+            <nav class="nav__links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#technology">Technology</a>
+                <a href="index.html#examples">Use Cases</a>
+                <a href="index.html#token">Token</a>
+                <a href="index.html#join">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section" style="padding-top:120px">
+        <div class="container">
+            <h1 class="section__title">TIME — الزمن الموثّق</h1>
+            <p class="section__text">Chrona Track: طبقة زمنية ذكية توثّق كل ثانية إنتاجية وتحوّل وقتك إلى قيمة.</p>
+            <div class="timeline" style="margin-top:16px">
+                <div class="timeline__track" aria-hidden="true"></div>
+                <div class="event"><span class="dot"></span> توثيق جلسة تعلم 90 دقيقة</div>
+                <div class="event"><span class="dot"></span> إنجاز مهمة برمجية</div>
+                <div class="event"><span class="dot"></span> مراجعة بحثية</div>
+                <div class="event result"><span class="dot"></span> مكافأة زمنية: +12</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <img src="assets/logo.svg" alt="IDRA" class="logo__img" />
+                <span>IDRA © 2025 — The Era of Digital Identity</span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>document.documentElement.lang = localStorage.getItem('idra_lang')||'ar'; document.documentElement.dir = (localStorage.getItem('idra_lang')||'ar')==='ar'?'rtl':'ltr';</script>
+</body>
+</html>
+
+

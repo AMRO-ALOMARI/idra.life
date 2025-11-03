@@ -1,0 +1,28 @@
+<svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8A6FFF"/>
+      <stop offset="100%" stop-color="#5B3FFF"/>
+    </linearGradient>
+    <radialGradient id="face" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#2B1769"/>
+      <stop offset="100%" stop-color="#0F0F10"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#shadow)">
+    <circle cx="110" cy="110" r="96" fill="url(#face)" stroke="url(#edge)" stroke-width="10"/>
+    <circle cx="110" cy="110" r="72" stroke="#6C4FFF" stroke-opacity="0.35" stroke-width="2"/>
+    <circle cx="110" cy="110" r="52" stroke="#36A2FF" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="6 10"/>
+    <g>
+      <rect x="102" y="70" width="16" height="64" rx="8" fill="#FFFFFF"/>
+      <circle cx="110" cy="146" r="8" fill="#FFFFFF"/>
+    </g>
+  </g>
+  <defs>
+    <filter id="shadow" x="0" y="0" width="220" height="220" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#5B3FFF" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+</svg>
+
+

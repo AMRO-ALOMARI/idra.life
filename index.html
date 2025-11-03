@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IDRA — The Era of Digital Identity</title>
+    <meta name="description" content="IDRA — Own Your Digital Life. Identity, Time, and Data under your control." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Urbanist:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="nav" class="nav">
+        <div class="container nav__inner">
+            <a href="#home" class="logo">
+                <img src="assets/logo.svg" alt="IDRA" class="logo__img" />
+                <span class="logo__text">IDRA</span>
+            </a>
+            <nav class="nav__links">
+                <a href="#home" data-i18n="nav.home">Home</a>
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#technology" data-i18n="nav.technology">Technology</a>
+                <a href="#examples" data-i18n="nav.useCases">Use Cases</a>
+                <a href="#token" data-i18n="nav.token">Token</a>
+                <a href="#join" data-i18n="nav.join">Join</a>
+            </nav>
+            <div class="nav__actions">
+                <a href="#token" class="btn btn--primary glow" data-i18n="cta.token">View IDRA Token</a>
+                <button id="lang-toggle" class="lang__toggle" aria-label="Toggle language">EN</button>
+            </div>
+            <button class="nav__toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero__bg" aria-hidden="true">
+            <div class="orb orb--1"></div>
+            <div class="orb orb--2"></div>
+            <div class="orb orb--3"></div>
+            <div class="parallax parallax--slow"></div>
+            <div class="parallax parallax--fast"></div>
+            <div id="living-core" class="core">
+                <canvas id="core-canvas"></canvas>
+                <div id="core-tooltip" class="core__tooltip" role="tooltip">Time Recorded</div>
+            </div>
+        </div>
+        <div class="container hero__content">
+            <h1 class="headline sr" data-i18n="hero.title">Own Your Digital Life.</h1>
+            <p class="subhead sr" data-i18n="hero.subtitle">
+                هويتك. زمنك. بياناتك. ملكك وحدك.
+                <br />
+                IDRA هو النظام الذي يمنحك السيادة الكاملة على وجودك الرقمي — عبر هوية ذكية، زمن موثّق، وبيانات مملوكة لك فقط.
+            </p>
+            <div class="hero__actions sr">
+                <a href="#join" class="btn btn--primary glow" data-i18n="cta.claim">Claim Your Digital Self</a>
+                <button id="watch-demo" class="btn btn--ghost" data-i18n="cta.watch">Watch How It Works</button>
+            </div>
+            <p class="core__caption sr" data-i18n="hero.caption">Every Second. Every Action. Every Byte — Signed by You.</p>
+        </div>
+    </section>
+
+    <!-- Demo Modal -->
+    <div id="demo-modal" class="modal" aria-hidden="true" role="dialog" aria-label="IDRA Intro Animation">
+        <div class="modal__backdrop" data-close></div>
+        <div class="modal__dialog">
+            <button class="modal__close" aria-label="Close" data-close>✕</button>
+            <div class="demo__scene">
+                <div class="face"></div>
+                <div class="tokens">
+                    <span>ID</span><span>TIME</span><span>DATA</span>
+                </div>
+                <div class="brand" data-i18n="modal.brand">IDRA — The Era of Digital Identity.</div>
+            </div>
+            <div class="modal__controls">
+                <button class="modal__btn" id="demo-restart">Restart</button>
+                <button class="modal__btn" id="demo-mute">Mute</button>
+            </div>
+            <audio id="demo-audio" preload="auto">
+                <source src="" type="audio/mpeg" />
+            </audio>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="section section--about">
+        <div class="container">
+            <h2 class="section__title sr" data-i18n="about.title">ما هي IDRA؟</h2>
+            <p class="section__text sr" data-i18n="about.text">
+                IDRA تعني ID + ERA — عصر الهوية الرقمية. نحن نبني أول نظام في العالم يمنح كل إنسان ملكية كاملة على هويته الرقمية، يوقّع زمنه، ويحفظ بياناته داخل سجل ذكي وآمن. في IDRA، كل ثانية من حياتك الرقمية تصبح أصلًا رقميًا يخصّك أنت وحدك.
+            </p>
+            <div class="about__merge sr">
+                <a class="chip" href="id.html" aria-label="ID page">ID</a>
+                <a class="chip" href="time.html" aria-label="Time page">TIME</a>
+                <a class="chip" href="data.html" aria-label="Data page">DATA</a>
+                <span class="chip chip--life">LIFE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology -->
+    <section id="technology" class="section section--tech">
+        <div class="container">
+            <h2 class="section__title sr" data-i18n="tech.title">الركائز الثلاث التي تُكوّن حياتك الرقمية.</h2>
+            <div class="cards">
+                <article class="card sr">
+                    <div class="card__icon">🪪</div>
+                    <h3 class="card__title" data-i18n="tech.core.title">IDRA Core — الهوية المركزية</h3>
+                    <p class="card__text" data-i18n="tech.core.text">هويتك الرقمية الموقّعة بيومتريًا، تُستخدم لتوثيق كل نشاط تقوم به داخل النظام.</p>
+                </article>
+                <article class="card sr">
+                    <div class="card__icon">⏳</div>
+                    <h3 class="card__title" data-i18n="tech.time.title">Chrona Track — الزمن الرقمي</h3>
+                    <p class="card__text" data-i18n="tech.time.text">طبقة زمنية ذكية توثّق كل ثانية إنتاجية وتحول وقتك إلى وحدة قيمة رقمية.</p>
+                </article>
+                <article class="card sr">
+                    <div class="card__icon">🔐</div>
+                    <h3 class="card__title" data-i18n="tech.data.title">VaultX — البيانات المملوكة ذاتيًا</h3>
+                    <p class="card__text" data-i18n="tech.data.text">خزان بيانات مشفّر يخزّن كل تفاعلك ويمنحك التحكم الكامل بالمشاركة أو البيع.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Example -->
+    <section id="examples" class="section section--example">
+        <div class="container">
+            <h2 class="section__title sr" data-i18n="example.title">مثال حيّ من داخل IDRA</h2>
+            <div class="timeline sr">
+                <div class="timeline__track" aria-hidden="true"></div>
+                <div class="event"><span class="dot"></span> 👤 ID بدأ يومه داخل IDRA</div>
+                <div class="event"><span class="dot"></span> درس 5 ساعات في الأمن السيبراني</div>
+                <div class="event"><span class="dot"></span> كتب تقرير ثغرة</div>
+                <div class="event"><span class="dot"></span> شاهد مقطعًا علميًا</div>
+                <div class="event"><span class="dot"></span> استخدم ذكاء صناعي لتطوير أداة</div>
+                <div class="event result"><span class="dot"></span> أصدر له 47 IDRA Tokens كمكافأة فعلية على المعرفة</div>
+                <div class="event"><span class="dot"></span> باع بيانات تعلمه المجهولة الهوية مقابل 0.2 ETH مع احتفاظه بملكية بياناته داخل VaultX</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section section--usecases">
+        <div class="container">
+            <h2 class="section__title sr" data-i18n="use.title">مستقبل الحياة الرقمية يبدأ هنا.</h2>
+            <div class="usecases">
+                <div class="usecase sr"><div class="ico">🪙</div><h3 data-i18n="use.card1.title">سوق عالمي للبيانات الزمنية الموثّقة</h3><p data-i18n="use.card1.text">بيع بياناتك المجهولة للمؤسسات مقابل دخل مباشر.</p></div>
+                <div class="usecase sr"><div class="ico">🧩</div><h3 data-i18n="use.card2.title">تقييم موثوق للمهارات والسمعة الرقمية</h3><p data-i18n="use.card2.text">سيرتك الذاتية الزمنية — بياناتك هي دليلك.</p></div>
+                <div class="usecase sr"><div class="ico">⏱️</div><h3 data-i18n="use.card3.title">أنظمة توظيف قائمة على الزمن المنتج</h3><p data-i18n="use.card3.text">الشركات تدفع على الإنتاج الحقيقي، لا على الساعات النظرية.</p></div>
+                <div class="usecase sr"><div class="ico">🎓</div><h3 data-i18n="use.card4.title">تعليم ذكي يكافئك على الجهد الحقيقي</h3><p data-i18n="use.card4.text">التعلم القائم على الفهم والإنجاز، لا المشاهدة.</p></div>
+                <div class="usecase sr"><div class="ico">🧠</div><h3 data-i18n="use.card5.title">ذكاء صناعي شخصي مبني على بياناتك</h3><p data-i18n="use.card5.text">IDRA AI يتعلم منك ليطورك.</p></div>
+                <div class="usecase sr"><div class="ico">🌐</div><h3 data-i18n="use.card6.title">هوية مهنية عالمية لا يمكن تزويرها</h3><p data-i18n="use.card6.text">بطاقة حياة رقمية تثبت من أنت وماذا أنجزت.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics -->
+    <section id="token" class="section section--token">
+        <div class="container">
+            <h2 class="section__title sr" data-i18n="token.title">IDRA Token — اقتصاد الزمن والهوية.</h2>
+            <p class="section__text sr" data-i18n="token.text">كل ثانية، كل تفاعل، كل معرفة، تتحوّل إلى وحدة IDRA Token تمثل القيمة الحقيقية لوجودك الرقمي. يمكنك استخدامها للدفع، الاستثمار، أو تداول بياناتك بأمان.</p>
+            <div class="token__field" aria-hidden="true">
+                <canvas id="token-canvas"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join -->
+    <section id="join" class="section section--join">
+        <div class="container sr">
+            <p class="section__eyebrow" data-i18n="join.eyebrow">نحن على وشك دخول عصر جديد… عصر تمتلك فيه نفسك.</p>
+            <h2 class="section__title" data-i18n="join.title">كن من أوائل من يبنون هويتهم الرقمية اليوم.</h2>
+            <a href="#" class="btn btn--primary btn--xl glow" data-i18n="cta.claim">Claim Your Digital Self</a>
+        </div>
+        <div class="join__glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <img src="assets/logo.svg" alt="IDRA" class="logo__img" />
+                <span data-i18n="footer.brand">IDRA © 2025 — The Era of Digital Identity</span>
+            </div>
+            <nav class="footer__links">
+                <a href="#about" data-i18n="footer.about">About</a>
+                <a href="#" data-i18n="footer.docs">Docs</a>
+                <a href="#" data-i18n="footer.privacy">Privacy</a>
+                <a href="#" data-i18n="footer.contact">Contact</a>
+            </nav>
+            <div class="footer__social">
+                <a href="#">Discord</a>
+                <a href="#">X</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
